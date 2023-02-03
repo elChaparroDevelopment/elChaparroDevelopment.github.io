@@ -290,7 +290,7 @@
     <script>
         function myfunction_onload(){
             $.ajax({
-                url: "backend/readWriteSheets/trial.py",
+                url: "backend/readWriteSheets/readWrite.py",
                  context: document.body
                 })
             }
@@ -299,7 +299,8 @@
         function myfunction_sendOrder(){
             $.ajax({
                 url:"backend/readWriteSheets/readWrite.py",
-                context: document.body});}
+                context: document.body});
+        };
     </script>
 
 </body>
