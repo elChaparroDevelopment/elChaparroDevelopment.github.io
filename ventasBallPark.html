@@ -74,16 +74,14 @@
                     <hr class="w-25 mx-auto bg-primary">
                 </div>
                 <div class="row g-5" style="margin-left: 2%;">
-                    <div class="col-lg-4 col-md-6" onclick="addItem('Hombre', ' ........... ', 0)">
+                    <div class="col-lg-6 col-md-6" onclick="addItem('Hombre', ' ........... ', 0)">
                         <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
                             <h3 class="mb-3">Hombre</h3>
-                            <p class="mb-0">$0.00</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" onclick="addItem('Mujer', ' ............... ', 0)">
+                    <div class="col-lg-6 col-md-6" onclick="addItem('Mujer', ' ............... ', 0)">
                         <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
                             <h3 class="mb-3">Mujer</h3>
-                            <p class="mb-0">$0.00</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6" onclick="addItem('Birria', ' ................ ', 6)">
@@ -232,7 +230,7 @@
             }
 
         }
-        
+
         function deleteTrue(){
             var element = document.getElementById("hopefully");
             if(isDelete){
@@ -245,12 +243,17 @@
         }
 
         function clearAll(elementID){
-            total = 0;
-            list = {};
-            data = [];
-            sendData = [];
-            document.getElementById(elementID).innerHTML = "";
-            document.getElementById('cambio').innerHTML = "";
+            if (confirm('Are you sure you want to clear the order?')) {
+                total = 0;
+                list = {};
+                data = [];
+                sendData = [];
+                document.getElementById(elementID).innerHTML = "";
+                document.getElementById('cambio').innerHTML = "";
+            } else {
+                return false;
+        
+            }
         };
 
         function clearBox(elementID){
@@ -295,7 +298,7 @@
     <script>
         function myfunction_sendOrder(){
             $.ajax({
-                url:"/test",
+                url:"backend/readWriteSheets/readWrite.py",
                 context: document.body});}
     </script>
 
