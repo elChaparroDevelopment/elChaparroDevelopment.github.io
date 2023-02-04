@@ -74,47 +74,38 @@
                     <hr class="w-25 mx-auto bg-primary">
                 </div>
                 <div class="row g-5" style="margin-left: 2%;">
-                    <div class="col-lg-6 col-md-6" onclick="addItem('Hombre', ' ........... ', 0)">
+                    <div class="col-lg-6 col-md-6" onclick="addItem('Hombre', ' ................. ', 0, 1)">
                         <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
                             <h3 class="mb-3">Hombre</h3>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6" onclick="addItem('Mujer', ' ............... ', 0)">
+                    <div class="col-lg-6 col-md-6" onclick="addItem('Mujer', ' ..................... ', 0, 1)">
                         <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
                             <h3 class="mb-3">Mujer</h3>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" onclick="addItem('Birria', ' ................ ', 6)">
+                    <div class="col-lg-4 col-md-6" onclick="openPopUp(1)">
                         <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
-                            <h3 class="mb-3">Birria</h3>
-                            <p class="mb-0">$6.00</p>
+                            <h3 class="mb-3">Tacos X1</h3>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" onclick="addItem('Carne Asada', ' ... ', 5)">
+                    <div class="col-lg-4 col-md-6" onclick="openPopUp(2)">
                         <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
-                            <h3 class="mb-3">Carne Asada</h3>
-                            <p class="mb-0">$5.00</p>
+                            <h3 class="mb-3">Tacos X3</h3>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" onclick="addItem('Pollo', ' ................ ', 4)">
+                    <div class="col-lg-4 col-md-6" onclick="openPopUp(3)">
                         <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
-                            <h3 class="mb-3">Pollo</h3>
-                            <p class="mb-0">$4.00</p>
+                            <h3 class="mb-3">Quesadilla</h3>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" onclick="addItem('Quesito', ' ............ ', 1)">
-                        <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
-                            <h3 class="mb-3">Quesito</h3>
-                            <p class="mb-0">$1.00</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6" onclick="addItem('Agua', ' ................ ', 3)">
+                    <div class="col-lg-4 col-md-6" onclick="addItem('Agua', ' ...................... ', 3, 1)">
                         <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
                             <h3 class="mb-3">Agua</h3>
                             <p class="mb-0">$3.00</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" onclick="addItem('Gaseosa', ' .......... ', 3)">
+                    <div class="col-lg-4 col-md-6" onclick="addItem('Gaseosa', ' ................ ', 3, 1)">
                         <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
                             <h3 class="mb-3">Gaseosa</h3>
                             <p class="mb-0">$3.00</p>
@@ -149,6 +140,96 @@
         </div>
       </div>
     <!-- Services End -->
+
+    <div class="popUpTaco1" id="popUpTaco1">
+        <div class="container-fluid pt-6 px-5" style="margin-bottom: 5%; max-width: 800px;">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h1 class="display-5 mb-0">Tacos X1</h1>
+                <hr class="w-25 mx-auto bg-primary">
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-3" onclick="addItem('TacoBirria', ' ............. ', 6, 1); closePopUp();">
+                    <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
+                        <h3 class="mb-3">Birria</h3>
+                        <p class="mb-0">$6.00</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3" onclick="addItem('TacoCarne', ' ............ ', 5, 1); closePopUp();">
+                    <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
+                        <h3 class="mb-3">Carne Asada</h3>
+                        <p class="mb-0">$5.00</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3" onclick="addItem('TacoPollo', ' .............. ', 4, 1); closePopUp();">
+                    <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
+                        <h3 class="mb-3">Pollo</h3>
+                        <p class="mb-0">$4.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a onclick="closePopUp()" class="btn btn-primary py-md-1 px-md-4 me-2 rounded-pill" style="margin-bottom: 2%;">Close</a>
+    </div>
+
+    <div class="popUpTaco3" id="popUpTaco3">
+        <div class="container-fluid pt-6 px-5" style="margin-bottom: 5%; max-width: 800px;">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h1 class="display-5 mb-0">Tacos X3</h1>
+                <hr class="w-25 mx-auto bg-primary">
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-3" onclick="addItem('TacoBirria', ' ............. ', 18, 3); closePopUp();">
+                    <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
+                        <h3 class="mb-3">Birria</h3>
+                        <p class="mb-0">$18.00</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3" onclick="addItem('TacoCarne', ' ............ ', 15, 3); closePopUp();">
+                    <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
+                        <h3 class="mb-3">Carne Asada</h3>
+                        <p class="mb-0">$15.00</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3" onclick="addItem('TacoPollo', ' .............. ', 12, 3); closePopUp();">
+                    <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
+                        <h3 class="mb-3">Pollo</h3>
+                        <p class="mb-0">$12.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a onclick="closePopUp();" class="btn btn-primary py-md-1 px-md-4 me-2 rounded-pill" style="margin-bottom: 2%;">Close</a>
+    </div>
+
+    <div class="popUpQuesadilla" id="popUpQuesadilla">
+        <div class="container-fluid pt-6 px-5" style="margin-bottom: 5%; max-width: 800px;">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h1 class="display-5 mb-0">Tacos X3</h1>
+                <hr class="w-25 mx-auto bg-primary">
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-3" onclick="addItem('QuesadillaBirria', ' ... ', 18, 1); closePopUp();">
+                    <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
+                        <h3 class="mb-3">Birria</h3>
+                        <p class="mb-0">$18.00</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3" onclick="addItem('QuesadillaCarne', ' .. ', 18, 1); closePopUp();">
+                    <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
+                        <h3 class="mb-3">Carne Asada</h3>
+                        <p class="mb-0">$18.00</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-3" onclick="addItem('QuesadillaPollo', ' .... ', 15, 1); closePopUp();">
+                    <div class="service-item bg-secondary text-center px-5" style="max-width: 250px; max-height: 150px;">
+                        <h3 class="mb-3">Pollo</h3>
+                        <p class="mb-0">$15.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a onclick="closePopUp()" class="btn btn-primary py-md-1 px-md-4 me-2 rounded-pill" style="margin-bottom: 2%;">Close</a>
+    </div>
     
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
@@ -171,26 +252,52 @@
         let data = [];
         let sendData = [];
         let isDelete = false;
+
+        function openPopUp(popUpInt){
+            if(popUpInt == 1){
+                let popup = document.getElementById("popUpTaco1");
+                popup.classList.add("open-popUp")
+            } else if (popUpInt == 2){
+                let popup = document.getElementById("popUpTaco3");
+                popup.classList.add("open-popUp")
+            } else{
+                let popup = document.getElementById("popUpQuesadilla");
+                popup.classList.add("open-popUp")
+            }
+        };
+
+        function closePopUp(){
+                let popup = document.getElementById("popUpTaco1");
+                popup.classList.remove("open-popUp")
+                popup = document.getElementById("popUpTaco3");
+                popup.classList.remove("open-popUp")
+                popup = document.getElementById("popUpQuesadilla");
+                popup.classList.remove("open-popUp")
+        };
     
-        function addItem(item, separator, price){
+        function addItem(item, separator, price, unit){
             clearBox("myList");
             sendData.splice(-1);
             if(!isDelete){
                 if(data.includes(item)){
-                    list[item] += 1;
+                    list[item] += unit;
                     let ind = data.indexOf(item);
                     sendData[ind]= String(item + separator + list[item] +" ....................... $" + price*list[item] +".00")
                 }
                 else{
                     data.push(item);
-                    list[item] = 1;
+                    list[item] = unit;
                     sendData.push(item + separator + list[item] +" ....................... $" + price*list[item] +".00")
                 }
                 
                 total += price;
             } else{
                 if(data.includes(item)){
-                    list[item] -= 1;
+                    if(list[item] >= unit){
+                        list[item] -= unit;
+                    } else{
+                        alert("Tenes menos de 3 Tacos de los que queres eliminar.")
+                    }
                     let ind = data.indexOf(item);
                     if (list[item] == 0){
                         delete list.item;

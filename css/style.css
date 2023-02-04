@@ -266,3 +266,44 @@ h6,
     display: table;
     clear: both;
   }
+
+  .popUpTaco1{
+    max-width: 800px;
+    background-color: #FFFFF1;
+    border-radius: 6px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    visibility: hidden;
+  }
+
+  .popUpTaco3{
+    max-width: 800px;
+    background-color: #FFFFF1;
+    border-radius: 6px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    visibility: hidden;
+  }
+
+  .popUpQuesadilla{
+    max-width: 800px;
+    background-color: #FFFFF1;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    visibility: hidden;
+  }
+
+  .open-popUp{
+    visibility: visible;
+    top: 90%;
+  }
